@@ -3,217 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-/* General body styling */
-body {
-    background: url('https://images.unsplash.com/photo-1521587760476-6c12a4b040da?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGJvb2tzdG9yZXxlbnwwfHwwfHx8MA%3D%3D') no-repeat center center fixed;
-    background-size: cover;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Non-common styles retained in internal CSS */
+        #comedy .books {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 20px;
+        }
 
-/* Header styling */
-header {
-    background-color: #333;
-    color: white;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    position: relative;
-}
-
-header h3 {
-    margin: 0;
-    font-size: 24px;
-}
-
-/* Navigation styling */
-nav {
-    margin-top: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-}
-
-nav a, .dropdown span {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-nav a:hover, .dropdown span:hover {
-    text-decoration: underline;
-}
-
-/* Footer styling */
-footer {
-    background-color: #333;
-    color: white;
-    padding: 5px;
-    text-align: center;
-    position: relative;
-    width: 100%;
-    bottom: 0;
-}
-
-/* Dropdown menu styling */
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: white;
-    min-width: 120px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 12px 16px;
-    z-index: 5;
-    border-radius: 2px;
-}
-
-.dropdown-content p, .dropdown-content a {
-    margin: 0;
-    padding: 8px 0;
-    color: #333;
-    cursor: pointer;
-    text-decoration: none;
-}
-
-.dropdown-content p:hover, .dropdown-content a:hover {
-    background-color: #f1f1f1;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-.dropdown-content a {
-    display: block;
-    padding: 8px 16px;
-}
-
-/* Section styling */
-section {
-    background: rgba(255, 255, 255, 0.9); /* Increased transparency */
-    padding: 40px;
-    margin: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-h1 {
-    color: #333;
-    font-size: 28px;
-}
-
-p {
-    font-size: 18px;
-    line-height: 1.6;
-    color: #666;
-}
-
-/* Bookstore section styling */
-.bookstore {
-    padding: 20px;
-}
-
-.category {
-    margin-bottom: 40px;
-}
-
-.category h2 {
-    font-size: 24px;
-    color: #333;
-    margin-bottom: 20px;
-}
-
-.books {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between; /* Adjust spacing between books */
-    gap: 20px; /* Add gap between rows */
-}
-
-.book {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 10px;
-    padding: 20px;
-    width: 200px;
-    text-align: center;
-}
-
-.book img {
-    max-width: 100%;
-    height: auto;
-    border-bottom: 1px solid #ddd;
-    margin-bottom: 10px;
-}
-
-.book h3 {
-    font-size: 20px;
-    color: #333;
-    margin: 10px 0;
-}
-
-.book p {
-    font-size: 16px;
-    color: #666;
-    margin: 10px 0;
-}
-
-/* Back to Top button styling */
-#back-to-top {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #333;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 4px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display: none; /* Hidden by default */
-}
-
-#back-to-top:hover {
-    background-color: #555;
-}
-
-/* Horizontal layout for comedy books */
-#comedy .books {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 20px;
-}
-
-#self-help .books {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 30px; /* Ensure consistent spacing */
-}
-</style>
+        #self-help .books {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 30px; /* Ensure consistent spacing */
+        }
+    </style>
 </head>
 <body>
 <header>
     <img src=" https://github.com/cd-ghost/Literary-Esacape/blob/main/Untitled%20design.png?raw=true" alt="Literary Escape Logo" style="height: 80px; vertical-align: middle; margin-right: 10px;">
     <h3 style="display: inline;">LITERARY ESCAPE.com</h3>
     <nav>
-       <a href="index.html">Home</a>
+        <a href="index.html">Home</a>
         <div class="dropdown">
             <span>Books</span>
             <div class="dropdown-content">
-                <a href="#sci-fi">Sci-fi</a>
-                <a href="#self-help">self-help</a>
+                <a href="#sci-fi">Fiction</a>
+                <a href="#self-help">Non-Fiction</a>
                 <a href="#comedy">comedy</a>
                 <a href="#children">Children</a>
                 <a href="#thriller">Thriller</a>
@@ -291,14 +110,27 @@ p {
                     <button type="submit" style="display: inline-block;">Add to Cart</button>
                 </form>
             </div>
+            <div class="book">
+                <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRwIgOZnGHn9sZXqEtAngchGwNkz2nwtD8AxcOi29TSEh1uXBmvfDQiEIdJauvedNGPKpDZLDuem6notOY-jhHCrwJRdJJ4JtTdX-2so9k&usqp=CAE" alt="Sci-fi Book 7">
+                <h3>Brave New World</h3>
+                <p>Aldous Huxley</p>
+                <p>₹299</p>
+                <form action="paymentgateway.html" method="get">
+                    <button type="submit" style="display: inline-block;">Add to Cart</button>
+                </form>
+            </div>
+            <div class="book">
+                <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQq0g2vXk3x4j5b6m7c8z5G4J6Y1Zl7nqkW2rXy3K0a8f1eFh4wz9g5x5i0j0t1s4p3v2u7G6H9J8V8L2Q&usqp=CAE" alt="Sci-fi Book 8">
+                <h3>Fahrenheit 451</h3>
+                <p>Ray Bradbury</p>
+                <p>₹299</p>
+                <form action="paymentgateway.html" method="get">
+                    <button type="submit" style="display: inline-block;">Add to Cart</button>
+                </form>
+            </div>
         </div>
     </div>
 </section>
-    <section class="bookstore">
-    <div class="category" id="self-help">
-        <h2>Self-help</h2>
-        <div class="books">  
-            
 
 <section class="bookstore">
     <div class="category" id="comedy">
@@ -384,156 +216,60 @@ p {
         <h2>Children</h2>
         <div class="books">
             <div class="book">
-                <img src="https://imgs.search.brave.com/A7b4z9PB8YgrdoS8Cd39YHLZyg8d5tbk2S7tx_IWdxI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/aGFjaGV0dGVib29r/Z3JvdXAuY29tL3dw/LWNvbnRlbnQvdXBs/b2Fkcy8yMDE3LzA2/Lzk3ODAzMTYzODE5/OTQuanBnP3c9NDMw" alt="Children Book 1">
-                <h3>The Wild Robot</h3>
-                <p>Peter Brown</p>
-                <p>₹299</p>
+                <img src="https://www.nicepng.com/png/detail/63-631741_snow-white-cover-return-of-snow-white-and.png" alt="Children Book 1">
+                <h3>Snow white and the seven dwarfs</h3>
+                <p>Walt disney</p>
+                <p>₹199</p>
                 <form action="paymentgateway.html" method="get">
                     <button type="submit" style="display: inline-block;">Add to Cart</button>
                 </form>
             </div>
             <div class="book">
-                <img src="https://imgs.search.brave.com/Nn_q522vminSrMlvHgo2qfJZZeoPQPgti8YuHNZzoqM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLmhh/cnBlcmFwcHMuY29t/L2hjdWsvY292ZXJz/Lzk3ODAwMDczNTE1/OTYveDQwMC5qcGc_/cGg9aGFycGVycmVh/Y2hfY29taW5nX3Nv/b24ucG5n" alt="Children Book 2">
-                <h3>Alice in the Wonderland</h3>
-                <p>Lewis Carroll</p>
-                <p>₹299</p>
+                <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRP4sK8ulE0kNHPvlME3WsGU1cz5_YzeRWuFSU4-TQoGTkq4SwaMdkmW7AaF4AbFtsikEB3mX7DR6-4C-uHAfsrTLMnYGKrng4zMvFw0LZTBD7m_aU3QUShnw&usqp=CAE" alt="Children Book 2">
+                <h3>Children Book Title 2</h3>
+                <p>Author 2</p>
+                <p>$9.00</p>
                 <form action="paymentgateway.html" method="get">
                     <button type="submit" style="display: inline-block;">Add to Cart</button>
                 </form>
             </div>
             <div class="book">
-                <img src="https://imgs.search.brave.com/gywYN0CZ5EXCPY-2FAIkTyNJWj-qlLIgjS6zT8aVBgM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/d2F0ZXJzdG9uZXMu/Y29tL2Jvb2tqYWNr/ZXRzL2xhcmdlLzk3/ODAvMDA4My85Nzgw/MDA4MzMzNzgyLmpw/Zw" alt="Children Book 3">
-                <h3>The Kid Who Came From Space</h3>
-                <p>Ross Welford</p>
-                <p>₹299</p>
+                <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRP4sK8ulE0kNHPvlME3WsGU1cz5_YzeRWuFSU4-TQoGTkq4SwaMdkmW7AaF4AbFtsikEB3mX7DR6-4C-uHAfsrTLMnYGKrng4zMvFw0LZTBD7m_aU3QUShnw&usqp=CAE" alt="Children Book 2">
+                <h3>Children Book Title </h3>
+                <p>Author 2</p>
+                <p>$9.00</p>
                 <form action="paymentgateway.html" method="get">
                     <button type="submit" style="display: inline-block;">Add to Cart</button>
                 </form>
-            </div>
-            <div class="book">
-                <img src="https://imgs.search.brave.com/C3TmY9PRqoQfhMbioJFsWAiCdJK-8TwkJUNDlSO5cGY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnJl/ZGQuaXQvZ2hmaTZ5/NnI2a2JjMS5qcGVn" alt="Children Book 4">
-                <h3>The Girl Who Drank the Moon</h3>
-                <p>Kelly Barnhill</p>
-                <p>₹299</p>
-                <form action="paymentgateway.html" method="get">
-                    <button type="submit" style="display: inline-block;">Add to Cart</button>
-                </form>
-            </div>
-            <div class="book">
-                <img src="https://imgs.search.brave.com/YYe6a6BvmntZobeOHj_FoDujjJA_ZgR9HrCfwlWJTW4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnRo/cmlmdGJvb2tzLmNv/bS9hcGkvaW1hZ2Vo/YW5kbGVyL20vODI3/MjNBOTlDNTBFQ0M3/Q0NGRjhCRkEzMDQ0/RUREMkRFRDAwM0Y1/OS5qcGVn" alt="Children Book 5">
-                <h3>Charlie And The Chocolate Factory</h3>
-                <p>Ronald Dahl</p>
-                <p>₹299</p>
-                <form action="paymentgateway.html" method="get">
-                    <button type="submit" style="display: inline-block;">Add to Cart</button>
-                </form>
-            </div>
-            <div class="book">
-                <img src="https://imgs.search.brave.com/VsJVCERqPf6q0fHouUGBsP0A4G6n7y07qT1KzLS4xL0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NTFHUFhsa2pqTEwu/anBn" alt="Children Book 6">
-                <h3>Gangsta Granny</h3>
-                <p>David Walliams</p>
-                <p>₹299</p>
-                <form action="paymentgateway.html" method="get">
-                    <button type="submit" style="display: inline-block;">Add to Cart</button>
-                </form>
-            </div>
-            <div class="book">
-                <img src="https://imgs.search.brave.com/gPstlM4qLJU-HF56hv6vjLHUscuTQvvy7rqcDNH7SdU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4x/MS5iaWdjb21tZXJj/ZS5jb20vcy0wZjFi/MS9pbWFnZXMvc3Rl/bmNpbC82MDh4NjA4/L3Byb2R1Y3RzLzEw/MTE5LzczOTAxL1kw/NDA1X1RoZV9NYWdp/Y19GaW5nZXJfRnJv/bnRfXzgxNjkzLjE2/MDgwNTg5NTIuanBn/P2M9Mg" alt="Children Book 7">
-                <h3>The Magic Finger</h3>
-                <p>Roald Dahl</p>
-                <p>₹299</p>
-                <form action="paymentgateway.html" method="get">
-                    <button type="submit" style="display: inline-block;">Add to Cart</button>
-                </form>
-            </div>
-            <div class="book">
-                <img src="https://imgs.search.brave.com/uGv7qAk_FhZQH_4sLgRYt9XTdtVzejNWIHxdbeF_c44/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuYm9va3NlbnNl/LmNvbS9pbWFnZXMv/NDAyLzQ1MS85Nzgw/MTQzNDUxNDAyLmpw/Zw" alt="Children Book 8">
-                <h3>How the Sea Became Salty</h3>
-                <p>Sudha Murthy</p>
-                <p>₹299</p>
-                <form action="paymentgateway.html" method="get">
-                    <button type="submit" style="display: inline-block;">Add to Cart</button>
-                </form>
-            </div>
             </div>
         </div>
+    </div>
 </section>
 <section class="bookstore">
     <div class="category" id="thriller">
         <h2>Thriller</h2>
-        <div class="book">
-                <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQq0g2vXk3x4j5b6m7c8z5G4J6Y1Zl7nqkW2rXy3K0a8f1eFh4wz9g5x5i0j0t1s4p3v2u7G6H9J8V8L2Q&usqp=CAE" alt="Thriller Book 1">
-                <h3>The ABC Murders</h3>
-                <p>Agatha Christie</p>
-                <p>₹299</p>
+        <div class="books">
+            <div class="book">
+                <img src="C:\Users\lanla\Desktop\html\microproject\book1.jpg" alt="Thriller Book 1">
+                <h3>Thriller Book Title 1</h3>
+                <p>Author 1</p>
+                <p>$11.00</p>
                 <form action="paymentgateway.html" method="get">
                     <button type="submit" style="display: inline-block;">Add to Cart</button>
                 </form>
             </div>
             <div class="book">
-                <img src="https://imgs.search.brave.com/QeuzhXkWymCOLbpD8BqgS3w9_gBQSpHU0xWV_w-a35s/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnRo/cmlmdGJvb2tzLmNv/bS9hcGkvaW1hZ2Vo/YW5kbGVyL20vOTk1/NTU2NzIzNTc4ODdG/QjBENkI2RUQ5MjY1/MDM1NjM3RkI1QzI4/Qi5qcGVn" alt="Thriller Book 2">
-                <h3>Blood Meridian</h3>
-                <p>Cormac McCarthy</p>
-                <p>₹299</p>
+                <img src="C:\Users\lanla\Desktop\html\book1.jpg" alt="Thriller Book 2">
+                <h3>Thriller Book Title 2</h3>
+                <p>Author 2</p>
+                <p>$13.00</p>
                 <form action="paymentgateway.html" method="get">
                     <button type="submit" style="display: inline-block;">Add to Cart</button>
                 </form>
             </div>
-            <div class="book">
-                <img src="https://imgs.search.brave.com/eWCDUiDhZQnnxNQp_qXXn-G0G7r2Mpo8GEgYcMDbExk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NTEtNW1GRWdUWUwu/anBn" alt="Thriller Book 3">
-                <h3>The Hound Of Baskervilles</h3>
-                <p>Conan Doyle</p>
-                <p>₹299</p>
-                <form action="paymentgateway.html" method="get">
-                    <button type="submit" style="display: inline-block;">Add to Cart</button>
-                </form>
-            </div>
-            <div class="book">
-                <img src="https://imgs.search.brave.com/lbU_5gsxEK_QVrLdYLvkuu6LceEOC2lntDVvcXFT01o/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pMC53/cC5jb20vYm9va3Nv/ZmJyaWxsaWFuY2Uu/Y29tL3dwLWNvbnRl/bnQvdXBsb2Fkcy8y/MDIyLzAzL1NjcmVl/bi1TaG90LTIwMjIt/MDMtMDgtYXQtMTEu/NDIuMjgtUE0ucG5n/P2ZpdD04MTYsMTE3/OCZzc2w9MQ" alt="Thriller Book 4">
-                <h3>No Country For Old Men</h3>
-                <p>Cormac McCarthy</p>
-                <p>₹299</p>
-                <form action="paymentgateway.html" method="get">
-                    <button type="submit" style="display: inline-block;">Add to Cart</button>
-                </form>
-            </div>
-            <div class="book">
-                <img src="https://imgs.search.brave.com/1quhLgEb3EFBv8YGgQTfcvHr0ilYTw9srygBT2ueNfQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLmhh/cnBlcmFwcHMuY29t/L2NvdmVycy85Nzgw/MDYzMTYwMzU0L3gy/MjguanBn" alt="Thriller Book 5">
-                <h3>Murder on the Orient Express</h3>
-                <p>Agatha Christie</p>
-                <p>₹299</p>
-                <form action="paymentgateway.html" method="get">
-                    <button type="submit" style="display: inline-block;">Add to Cart</button>
-                </form>
-            </div>
-            <div class="book">
-                <img src="https://imgs.search.brave.com/h3Z6gndv5Y5I25bI1JHCcJpPg0m-srtrXA3BlIrZFwA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMtbmEuc3NsLWlt/YWdlcy1hbWF6b24u/Y29tL2ltYWdlcy9J/LzcxRnRXalpWRExM/LmpwZw" alt="Thriller Book 6">
-                <h3>Hallowe'en Party</h3>
-                <p>Agatha Christie</p>
-                <p>₹299</p>
-                <form action="paymentgateway.html" method="get">
-                    <button type="submit" style="display: inline-block;">Add to Cart</button>
-                </form>
-            </div>
-            <div class="book">
-                <img src="https://imgs.search.brave.com/m_3a5vVJ3IQTeBvntlim1tAtPZ0_xBKLHKm8NQYu9tQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMtbmEuc3NsLWlt/YWdlcy1hbWF6b24u/Y29tL2ltYWdlcy9J/LzQxcURhbnRPeG9M/LmpwZw" alt="Thriller Book 7">
-                <h3>The Final Problem</h3>
-                <p>Conan Doyle</p>
-                <p>₹299</p>
-                <form action="paymentgateway.html" method="get">
-                    <button type="submit" style="display: inline-block;">Add to Cart</button>
-                </form>
-            </div>
-            <div class="book">
-                <img src="https://imgs.search.brave.com/xCyly8dFX_rLmAGY0stOHu2uePOV9QHc1z9vMXSuL7E/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NTEzcG9LSUhZcEwu/anBn" alt="Thriller Book 8">
-                <h3>The Death On Nile</h3>
-                <p>Agatha Christie</p>
-                <p>₹299</p>
-                <form action="paymentgateway.html" method="get">
-                    <button type="submit" style="display: inline-block;">Add to Cart</button>
-                </form>
-            </div>
+            <!-- Add more thriller books as needed -->
         </div>
+    </div>
 </section>
 <section id="about">
     <h1>About Our Bookstore</h1>
